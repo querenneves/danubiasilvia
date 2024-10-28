@@ -53,6 +53,45 @@
             position: relative;
         }
 
+        footer {
+            padding: 20px;
+            background-color: #f1890960;
+            /* Cor de fundo opcional */
+        }
+
+        .parcerias h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .imagens-parcerias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Centraliza as imagens */
+        }
+
+        .imagens-parcerias img {
+            width: 100px;
+            /* Ajuste a largura conforme necessário */
+            height: auto;
+            /* Mantém a proporção */
+            margin: 10px;
+            /* Espaçamento entre as imagens */
+            transition: transform 0.2s;
+            /* Efeito de hover opcional */
+        }
+
+        .imagens-parcerias img:hover {
+            transform: scale(1.1);
+            /* Aumenta a imagem ao passar o mouse */
+        }
+
+        .contato {
+            text-align: center;
+            margin-top: 20px;
+        }
+
         .social-icons {
             margin-top: 10px;
         }
@@ -583,47 +622,47 @@
         </div>
     </div>
     <div class="master_sobre">
-        <div class="sub_sobre" style="display: flex; align-items: center;">
-            <div class="image_sobre" style="margin-right: 20px;">
+        <div class="sub_sobre">
+            <div class="text_sobre">
+                <h1>Diversidade e Inclusão: Construindo um Futuro Igualitário</h1>
+                <hr>
+                <p>
+                    Diversidade e inclusão são essenciais para uma sociedade justa e inovadora. Celebrar as diferenças
+                    enriquece nosso ambiente, promovendo criatividade e novas perspectivas. Ao implementar práticas
+                    inclusivas, garantimos que todas as vozes sejam ouvidas e valorizadas. Junte-se a nós na construção
+                    de um futuro onde a diversidade não apenas é reconhecida, mas celebrada, transformando comunidades e
+                    organizações!
+                </p>
+            </div>
+            <div class="image_sobre">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/IneLDgohjmY?si=9pxmZGJJwl3tt8Qt"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+        </div>
+        <br>
+        <div class="sub_sobre">
             <div class="text_sobre">
-                <h1>Empreendedorismo e Networking Profissional: Conectando Oportunidades</h1>
+                <h1>Letramento Racial: A Chave para a Igualdade e Inclusão</h1>
                 <hr>
                 <p>
-                    O empreendedorismo vai além de criar negócios; é sobre construir relações! O networking profissional
-                    é a chave para expandir horizontes, acessar recursos e compartilhar conhecimento. Ao se conectar com
-                    outros empreendedores e profissionais, você cria um ecossistema de apoio que pode impulsionar sua
-                    carreira e sua empresa. Descubra como fortalecer suas redes pode abrir portas para novas
-                    oportunidades e colaborações!
+                    O letramento racial é fundamental para promover a igualdade e a inclusão em nossa sociedade. Ao
+                    entender e desconstruir preconceitos, podemos cultivar um ambiente de respeito e empoderamento.
+                    Esta prática não apenas conscientiza sobre as desigualdades raciais, mas também incentiva a ação
+                    contra a discriminação. Vamos juntos explorar como o letramento racial pode transformar nossas
+                    interações e construir um futuro mais justo!
                 </p>
             </div>
-        </div>
-        <div class="master_sobre">
-            <div class="sub_sobre">
-                <div class="text_sobre">
-                    <h1>Letramento Racial: A Chave para a Igualdade e Inclusão
-                    </h1>
-                    <hr>
-                    <p>
-                        O letramento racial é fundamental para promover a igualdade e a inclusão em nossa sociedade. Ao
-                        entender e desconstruir preconceitos, podemos cultivar um ambiente de respeito e empoderamento.
-                        Esta prática não apenas conscientiza sobre as desigualdades raciais, mas também incentiva a ação
-                        contra a discriminação. Vamos juntos explorar como o letramento racial pode transformar nossas
-                        interações e construir um futuro mais justo!
-                    </p>
-                </div>
-                <div class="image_sobre">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hBdCgPLDuy8?si=UVrfHWbLQ8HVcFgM"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+            <div class="image_sobre">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hBdCgPLDuy8?si=UVrfHWbLQ8HVcFgM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
+    </div>
+    
 
     </div>
     <br>
@@ -672,12 +711,32 @@
     </div>
     <script async src="//www.instagram.com/embed.js"></script>
 
-    <div class="footer-container">
-        <footer class="bg-body-tertiary text-center py-4">
-            <i class="fas fa-envelope"></i> danubia_77@hotmail.com
-        </footer>
-
-    </div>
+    <footer>
+        <div class="parcerias">
+            <h2>Nossas Parcerias</h2>
+            <div class="imagens-parcerias">
+                <img src="img/mars.png" alt="Mars">
+                <img src="img/jadlog.png" alt="Jadlog">
+                <img src="img/ABRHSP.png" alt="ABRHSP">
+                <img src="img/black_hands.png" alt="Black Hands">
+                <img src="img/galgo_sa.png" alt="Galgo Sa">
+                <img src="img/santo_andre.png" alt="Santo Andre">
+                <img src="img/ZOE.png" alt="Zoe">
+                <img src="img/intrinseca.png" alt="Intríseca">
+                <img src="img/prestige.png" alt="Prestige">
+                <img src="img/log.png" alt="Log">
+                <img src="img/abrhrj.png" alt="ABRH RJ">
+                <img src="img/day.png" alt="Day">
+                <img src="img/unicamp.png" alt="Unicamp">
+            </div>
+        </div>
+        <div class="contato">
+            <h3>Contato</h3>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-2a017585/" target="_blank">Danúbia
+                    Silva</a></p>
+            <p>Email: <a href="mailto:danubia_77@hotmail.com">danubia_77@hotmail.com</a></p>
+        </div>
+    </footer>
 
     <script async src="//www.instagram.com/embed.js"></script>
 
