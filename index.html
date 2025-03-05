@@ -18,23 +18,32 @@
 
     <title>Home</title>
     <style>
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
+        .intro {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .video-container iframe,
-        .video-container object,
-        .video-container embed {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .video-item {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        iframe {
             width: 100%;
-            height: 100%;
+            border-radius: 8px;
         }
 
         footer i {
@@ -199,15 +208,22 @@
             padding: 15px 30px;
             font-size: 18px;
             color: white;
-            background-color: #EB5F07;
+            background: linear-gradient(135deg, #FF8C42, #FFB86F);
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background 0.3s, transform 0.3s;
             animation: pulsate 1.5s infinite;
             float: right;
-            /* Alinha o botão à direita */
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            /* Sombra suave */
         }
+
+        .hero-button:hover {
+            background: linear-gradient(135deg, #FFA769, #FFD194);
+            transform: scale(1.05);
+        }
+
 
 
         /* Animação Pulsante */
@@ -568,6 +584,10 @@
             </div>
         </div>
     </div>
+    <center>
+        <h1>Serviços</h1>
+    </center>
+    <hr>
 
     <div class="servicos">
         <div class="card">
@@ -600,72 +620,247 @@
             </div>
         </div>
     </div>
-    <div class="master_sobre">
-        <div class="sub_sobre">
-            <div class="text_sobre">
-                <h1>Diversidade e Inclusão: Construindo um Futuro Igualitário</h1>
-                <hr>
-                <p>
-                    Diversidade e inclusão são essenciais para uma sociedade justa e inovadora. Celebrar as diferenças
-                    enriquece nosso ambiente, promovendo criatividade e novas perspectivas. Ao implementar práticas
-                    inclusivas, garantimos que todas as vozes sejam ouvidas e valorizadas. Junte-se a nós na construção
-                    de um futuro onde a diversidade não apenas é reconhecida, mas celebrada, transformando comunidades e
-                    organizações!
-                </p>
-            </div>
-            <div class="image_sobre">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/AoaTX-ruLZY?si=diqDn93ygyX7kAeV"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+    <div class="servicos_sobre" style="text-align: left; margin: 20px 40px; font-size: 19px;">
+        <h1 style="font-size: 30px;">Por que escolher meus serviços?</h1>
+        <hr>
+        <p style="font-size: 17px;">
+            Liderança, Mentoria, Inclusão.
+        </p>
+    </div>
+    <div class="contratar">
+        <div class="sub-c">
+            <p class="tip">Liderança estratégica</p>
+            <p class="second-text">Com mais de 15 anos de experiência em Gestão de Crise, Vendas e Relacionamento,
+                lidero equipes com eficiência e visão estratégica.</p>
+        </div>
+        <div class="sub-c">
+            <p class="tip">Destaque no mercado</p>
+            <p class="second-text">Nos últimos 10 anos, conquistei posições de destaque em rankings de grandes empresas,
+                consolidando minha autoridade no setor.</p>
+        </div>
+        <div class="sub-c">
+            <p class="tip">Mentoria transformadora</p>
+            <p class="second-text">Atuo como mentora de carreira, ajudando profissionais a se desenvolverem e a
+                conquistarem novas oportunidades.</p>
+        </div>
+        <div class="sub-c">
+            <p class="tip">Compromisso com a diversidade</p>
+            <p class="second-text">Palestrante e facilitadora, atuo na promoção de ambientes mais justos e colaborativos
+                por meio da diversidade, inclusão e ESG.</p>
+        </div>
+        <div class="sub-c">
+            <p class="tip">Paixão e autenticidade</p>
+            <p class="second-text">Natural de Campinas-SP, sou apaixonada por rodas de samba, crossfit e discos de
+                vinil, trazendo autenticidade e energia para cada projeto.</p>
         </div>
     </div>
-    <div class="master_sobre">
-        <div class="sub_sobre">
-            <div class="text_sobre">
-                <h1>Diversidade e Inclusão: Construindo um Futuro Igualitário</h1>
+<br>
+                <center><h1>Depoimentos</h1></center>
                 <hr>
-                <p>
-                    Diversidade e inclusão são essenciais para uma sociedade justa e inovadora. Celebrar as diferenças
-                    enriquece nosso ambiente, promovendo criatividade e novas perspectivas. Ao implementar práticas
-                    inclusivas, garantimos que todas as vozes sejam ouvidas e valorizadas. Junte-se a nós na construção
-                    de um futuro onde a diversidade não apenas é reconhecida, mas celebrada, transformando comunidades e
-                    organizações!
-                </p>
-            </div>
-            <div class="image_sobre">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IneLDgohjmY?si=9pxmZGJJwl3tt8Qt"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-        <br>
-        <div class="sub_sobre">
-            <div class="text_sobre">
-                <h1>Letramento Racial: A Chave para a Igualdade e Inclusão</h1>
-                <hr>
-                <p>
-                    O letramento racial é fundamental para promover a igualdade e a inclusão em nossa sociedade. Ao
-                    entender e desconstruir preconceitos, podemos cultivar um ambiente de respeito e empoderamento.
-                    Esta prática não apenas conscientiza sobre as desigualdades raciais, mas também incentiva a ação
-                    contra a discriminação. Vamos juntos explorar como o letramento racial pode transformar nossas
-                    interações e construir um futuro mais justo!
-                </p>
-            </div>
-            <div class="image_sobre">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/hBdCgPLDuy8?si=UVrfHWbLQ8HVcFgM"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    
+                <center>
+                    <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                            </li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="avaliacoes">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-text">
+                                        “Não largo mais!” 🏅
+                                        Esta é uma das frases dita por Dan, em uma das nossas últimas mentorias.
+                                        A minha conexão com a Dan iniciou através da Comunidade Awalé. Tivemos aulas
+                                        incríveis sobre letramento racial.
+                                        Depois do período de finalização do curso, tivemos mais quatro encontros.
+                                        Trocamos muito, para além do profissional, conselhos de vida, perrengues e
+                                        muitas risadas.
+                                        A Dan é uma profissional de excelência. Diz o que precisa ser dito, auxilia com
+                                        materiais didáticos e nos incentiva constantemente a busca por novas
+                                        trajetórias. Posso afirmar que a Bia de hoje, melhorou 80% graças a Danúbia.
+                                        Nossa jornada nunca é solitária. Sou imensamente feliz e grata por esta mulher
+                                        ter cruzado os meus caminhos. É certo que ela fará muitas mudanças. Na verdade,
+                                        já está fazendo, na vida de muitas pessoas, assim como fez e faz na minha!
+                                    </div>
+                                    <div class="profile">
+                                        <img src="img/beatriz.jpg" alt="Profile Image">
+                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                                    </div>
+                                    <div class="name">Beatriz Pimentel</div>
 
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="avaliacoes">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-text">
+                                        A Dan foi essencial na minha jornada de autoconhecimento como uma líder negra.
+                                        Nossos encontros eram ricos porque ela sabe como extrair o melhor de cada pessoa
+                                        e trazer reflexões oportunas para as vivências diárias. Além disso, é
+                                        extremamente empática, conseguindo ter uma escuta vulnerável que permite
+                                        compreender o outro.
+                                    </div>
+                                    <div class="profile">
+                                        <img src="img/karina.jpg" alt="Profile Image">
+                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                                    </div>
+                                    <div class="name">Karina Souza</div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="avaliacoes">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-text">
+                                        É com grande entusiasmo que recomendo a Danúbia como uma profissional exemplar e
+                                        dedicada. Tivemos o privilégio de trabalhar juntas em uma empresa de mentoria
+                                        voltada para o mercado de trabalho de pessoas negras, e eu pude observar em
+                                        primeira mão sua habilidade única em compartilhar conhecimento e promover um
+                                        ambiente de trabalho colaborativo.
+                                        Danúbia é notável por sua comunicação clara e eficaz, o que facilita a
+                                        colaboração e o entendimento entre os membros da equipe. Sua empatia e
+                                        disposição para apoiar os outros, aliadas à sua humildade, são testemunhos de
+                                        seu verdadeiro comprometimento e capacidade de trabalhar em equipe.
+                                    </div>
+                                    <div class="profile">
+                                        <img src="img/joana.jpg" alt="Profile Image">
+                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                                    </div>
+                                    <div class="name">Joana D'arc</div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="avaliacoes">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-text">
+                                        Danúbia foi pessoa mentora voluntária num programa que visa contribuição para o
+                                        autoconhecimento e empoderamento de juventudes e adultos em situação de
+                                        periferia na zona sul de São Paulo.
+                                        Que mulher incrível! profissional e pessoa ímpar, de causas nobres e grande
+                                        coração.
+                                        Durante o programa, foi muito atenciosa, empática, carinhosa e disponível, tanto
+                                        para a Despertar, quanto para a pessoa mentorada.
+                                    </div>
+                                    <div class="profile">
+                                        <img src="img/carolina.jpg" alt="Profile Image">
+                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                                    </div>
+                                    <div class="name">Carolina Maria Souza</div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="avaliacoes">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-text">
+                                        Danúbia é uma pessoa excepcional, profissional e mentora inspiradora. Sua
+                                        resiliência, dedicação e abordagem empática são notáveis. Ela oferece
+                                        orientações valiosas e suporte incondicional, tornando o aprendizado mais
+                                        eficiente e gratificante. Seu profissionalismo exemplar e prontidão para ajudar
+                                        tornam-na um exemplo a ser seguido. Conhecer essa profissional talentosa é
+                                        inspirador, lembrando-nos do impacto positivo que podemos ter na vida das
+                                        pessoas ao nosso redor.
+                                    </div>
+                                    <div class="profile">
+                                        <img src="img/handreia.jpg" alt="Profile Image">
+                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                                    </div>
+                                    <div class="name">Paty Muneron</div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="avaliacoes">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-text">
+                                        Sempre pronta pra ajudar! Com informações claras, assertivas e que agregam valor. Compartilharmos da mesma equipe é um prazer! 
+                                    </div>
+                                    <div class="profile">
+                                        <img src="img/patrick.jpg" alt="Profile Image">
+                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                                    </div>
+                                    <div class="name">Ana Maria</div>
+
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </center>
+    <br>
+    <div class="container">
+        <div class="intro">
+            <h1>Explorando a Diversidade e Inclusão</h1>
+            <hr>
+            <p>Os vídeos abaixo abordam temas essenciais sobre diversidade e inclusão. Assista e descubra como podemos
+                construir um futuro mais igualitário e acolhedor.</p>
+        </div>
+
+        <div class="videos-container">
+            <div class="video-item">
+                <h2>Diversidade</h2>
+                <p>Diversidade e inclusão são essenciais para uma sociedade justa e inovadora.</p>
+                <iframe src="https://www.youtube.com/embed/AoaTX-ruLZY?si=diqDn93ygyX7kAeV"
+                    title="Diversidade e Inclusão" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-item">
+                <h2>Inclusão</h2>
+                <p>Celebrar as diferenças enriquece nosso ambiente e promove novas perspectivas.</p>
+                <iframe src="https://www.youtube.com/embed/IneLDgohjmY?si=9pxmZGJJwl3tt8Qt"
+                    title="Diversidade e Inclusão" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-item">
+                <h2>Letramento Racial</h2>
+                <p>O letramento racial é fundamental para promover a igualdade e a inclusão.</p>
+                <iframe src="https://www.youtube.com/embed/hBdCgPLDuy8?si=UVrfHWbLQ8HVcFgM" title="Letramento Racial"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     </div>
     <br>
+   
     <div class="card-container">
         <blockquote class="instagram-media zoom-card"
             style="border: 0; box-shadow: 0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
@@ -710,42 +905,43 @@
         </blockquote>
     </div>
     <script async src="//www.instagram.com/embed.js"></script>
+    
+                <footer>
+                    <div class="parcerias">
+                        <h2>Nossas Parcerias</h2>
+                        <div class="imagens-parcerias">
+                            <img src="img/mars.png" alt="Mars">
+                            <img src="img/jadlog.png" alt="Jadlog">
+                            <img src="img/ABRHSP.png" alt="ABRHSP">
+                            <img src="img/black_hands.png" alt="Black Hands">
+                            <img src="img/galgo_sa.png" alt="Galgo Sa">
+                            <img src="img/santo_andre.png" alt="Santo Andre">
+                            <img src="img/ZOE.png" alt="Zoe">
+                            <img src="img/intrinseca.png" alt="Intríseca">
+                            <img src="img/prestige.png" alt="Prestige">
+                            <img src="img/log.png" alt="Log">
+                            <img src="img/abrhrj.png" alt="ABRH RJ">
+                            <img src="img/day.png" alt="Day">
+                            <img src="img/unicamp.png" alt="Unicamp">
+                        </div>
+                    </div>
+                    <div class="contato">
+                        <h3>Contato</h3>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-2a017585/"
+                                target="_blank">Danúbia
+                                Silva</a></p>
+                        <p>Email: <a href="mailto:danubia_77@hotmail.com">danubia_77@hotmail.com</a></p>
+                    </div>
+                </footer>
 
-    <footer>
-        <div class="parcerias">
-            <h2>Nossas Parcerias</h2>
-            <div class="imagens-parcerias">
-                <img src="img/mars.png" alt="Mars">
-                <img src="img/jadlog.png" alt="Jadlog">
-                <img src="img/ABRHSP.png" alt="ABRHSP">
-                <img src="img/black_hands.png" alt="Black Hands">
-                <img src="img/galgo_sa.png" alt="Galgo Sa">
-                <img src="img/santo_andre.png" alt="Santo Andre">
-                <img src="img/ZOE.png" alt="Zoe">
-                <img src="img/intrinseca.png" alt="Intríseca">
-                <img src="img/prestige.png" alt="Prestige">
-                <img src="img/log.png" alt="Log">
-                <img src="img/abrhrj.png" alt="ABRH RJ">
-                <img src="img/day.png" alt="Day">
-                <img src="img/unicamp.png" alt="Unicamp">
+                <script async src="//www.instagram.com/embed.js"></script>
+
             </div>
+            </footer>
         </div>
-        <div class="contato">
-            <h3>Contato</h3>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-2a017585/" target="_blank">Danúbia
-                    Silva</a></p>
-            <p>Email: <a href="mailto:danubia_77@hotmail.com">danubia_77@hotmail.com</a></p>
-        </div>
-    </footer>
-
-    <script async src="//www.instagram.com/embed.js"></script>
-
-    </div>
-    </footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

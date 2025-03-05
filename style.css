@@ -6,7 +6,7 @@
 
 body {
   font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #ffbb00ab; /* Cor de fundo */
+  background-color: #f7dd9dd7; /* Cor de fundo */
   height: 200vh;
   position: relative;
   line-height: 1.6;
@@ -224,67 +224,287 @@ a {
 }
 /* Estilos para o layout */
 .master_sobre {
-  padding: 20px;
+  background: linear-gradient(135deg, #F4A261, #E9C46A); /* Degradê */
+  position: relative;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
 }
 
+/* Criando a onda marrom na parte inferior */
+.master_sobre::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%236D4C41" fill-opacity="1" d="M0,128L60,154.7C120,181,240,235,360,245.3C480,256,600,224,720,218.7C840,213,960,235,1080,218.7C1200,203,1320,149,1380,122.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>');
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Ajustes na área do texto */
 .sub_sobre {
   display: flex;
-  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* Ajuste do texto */
 .text_sobre {
   flex: 1;
-  padding: 10px;
-  max-width: 800px; 
-  text-align: center; 
+  max-width: 600px;
+  padding: 20px;
+  color: #3D2C23;
 }
 
+/* Ajuste da imagem */
 .image_sobre img {
-  margin-right: 20px; 
-	width: 100%;
-	max-width: 300px; /* Limite de largura para desktops */
-	height: auto;
-	transition: transform 0.3s ease; /* Transição suave para o efeito de flutuação */
+  max-width: 50%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .master_sobre {
+      padding: 40px 10px;
+  }
+
+  .sub_sobre {
+      padding: 10px;
+  }
+
+  .text_sobre h1 {
+      font-size: 24px; /* Ajuste no tamanho do título */
+  }
+
+  .text_sobre p {
+      font-size: 16px; /* Ajuste no tamanho do parágrafo */
+  }
+
+  .image_sobre img {
+      max-width: 90%; /* Ajuste da imagem */
+  }
 }
 
-.image_sobre img:hover {
-	transform: scale(1.05); /* Efeito de flutuação */
-}
+@media screen and (max-width: 480px) {
+  .master_sobre {
+      padding: 30px 10px;
+  }
 
-.sub_sobre {
-  display: flex;
-  flex-direction: column; /* Colunas em telas pequenas */
-  align-items: center; /* Centraliza os itens */
+  .text_sobre h1 {
+      font-size: 20px; /* Menor título */
+  }
+
+  .text_sobre p {
+      font-size: 14px; /* Menor parágrafo */
+  }
+
+  .image_sobre img {
+      max-width: 50%; /* Ajuste da imagem */
+  }
+
+  .sub_sobre {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .master_sobre::after {
+      height: 80px; /* Menor altura da onda em telas pequenas */
+  }
 }
 /* Estilos específicos para telas maiores */
 @media (min-width: 600px) {
   main {
       margin: 0 20px; /* Aumenta a margem nas laterais em telas maiores */
   }
-
-  .sub_sobre {
-      flex-direction: row; /* Mudando para linha em telas maiores */
-      align-items: flex-start; /* Alinhamento inicial */
-  }
-
-  .text_sobre, .image_sobre {
-    max-width: 100%; /* Limita a largura máxima da imagem ao tamanho do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaços em branco em volta da imagem */
-    margin: 0 auto;
-  }
-
-  .text_sobre {
-      padding: 20px; /* Adiciona mais padding ao texto em telas maiores */
-  }
-
-  .image_sobre img{
-    width: auto; /* Espaçamento entre texto e imagem */
-  }
 }
 
 @media (max-width: 600px) {
   .iframe-container {
       padding-bottom: 75%; /* Ajusta a proporção para telas menores, se necessário */
+  }
+}
+.contratar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(-45deg, #F4A261 0%, #E9C46A 50%, #E9C46A 100%);
+  border-radius: 10px;
+}
+.sub-c {
+  flex: 1;
+  min-width: 260px;
+  max-width: 300px;
+  background: #ffffff57;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sub-c:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tip {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.second-text {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .contratar {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+.master_sobre {
+  width: 100%;
+  padding: 0 15px;
+}
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .image_infop img {
+      max-width: 350px; /* Aumenta um pouco no mobile */
+  }
+}
+.master_sobre {
+  width: 100%;
+  padding: 0 15px;
+}
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .image_infop img {
+      max-width: 350px; /* Aumenta um pouco no mobile */
+  }
+}
+
+.avaliacoes-wrapper {
+  height: 800px;
+  min-height: 250px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 90%;
+  gap: 20px;
+}
+
+.avaliacoes {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  justify-content: space-between; 
+  height: 100%;
+  display: inline-block;
+}
+
+.avaliacoes:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating i {
+  color: gold;
+  font-size: 20px;
+  margin: 0 2px;
+}
+
+.review-text {
+  height: 150px;
+  min-height: 120px;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile .linkedin-logo {
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+}
+
+.name {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .avaliacoes {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .avaliacoes {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .profile img {
+      width: 80px;
+      height: 80px;
+  }
+
+  .profile .linkedin-logo {
+      width: 15px;
+      height: 15px;
+  }
+
+  .rating i {
+      font-size: 18px;
+  }
+
+  .review-text,
+  .name {
+      font-size: 16px;
   }
 }
