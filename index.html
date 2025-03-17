@@ -128,135 +128,103 @@
             text-shadow: 2px 2px 4px #0b7ef1;
         }
 
-        .hero-container {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            align-items: center;
-            text-align: center;
-        }
+      /* Ajusta a imagem para cobrir toda a tela */
+.hero-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/principal_lateral.png');
+    background-size: cover;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            /* Defina a altura da imagem de fundo */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+/* Estilização do conteúdo para melhor leitura */
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido para melhorar legibilidade */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    max-width: 80%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
-        .hero-text {
-            background-color: rgba(0, 0, 0, 0.329);
-            /* Fundo escuro com transparência para dar contraste e seriedade */
-            color: white;
-            /* Cor branca para o texto */
-            font-weight: bold;
-            /* Texto em negrito */
-            font-size: 18px;
-            padding: 20px;
-            border-radius: 50%;
-            /* Fundo circular */
-            max-width: 400px;
-            /* Limita a largura do texto */
-            line-height: 1.5;
-        }
+.hero-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.4;
+}
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 
-        .hero-left {
-            flex: 1 1 100%;
-            align-items: center;
-            justify-content: center;
-            min-height: 500px;
-        }
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
 
-        .hero-right {
-            display: none;
-            margin-top: 1px;
-            min-height: 500px;
-        }
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
 
-        @media (max-width: 767px) {
-            .hero-left {
-                display: none;
-            }
+.cta:hover svg {
+  transform: translateX(0);
+}
 
-            .hero-right {
-                display: block;
-                width: 100%;
-            }
-        }
+.cta:active svg {
+  transform: scale(0.9);
+}
 
-        @media (min-width: 768px) {
+.hover-underline-animation {
+  position: relative;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
 
-            .hero-left,
-            .hero-right {
-                flex: 1;
-                display: block;
-            }
-        }
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
-        .logo {
-            max-width: 400px;
-            margin-bottom: 20px;
-        }
-
-        .hero-button {
-            margin-top: 10px;
-            margin-right: 10px;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background: linear-gradient(135deg, #FF8C42, #FFB86F);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s;
-            animation: pulsate 1.5s infinite;
-            float: right;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-            /* Sombra suave */
-        }
-
-        .hero-button:hover {
-            background: linear-gradient(135deg, #FFA769, #FFD194);
-            transform: scale(1.05);
-        }
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .hero-container {
+        background-image: url('./img/principal_lateral.png'); /* Imagem diferente no mobile, se necessário */
+    }
+    
+    .hero-content {
+        max-width: 90%;
+        font-size: 16px;
+    }
+}
 
-        /* Animação Pulsante */
-        @keyframes pulsate {
-
-            0%,
-            100% {
-                transform: scale(1);
-                /* Estado inicial e final */
-            }
-
-            50% {
-                transform: scale(1.1);
-                /* Aumenta levemente no meio da animação */
-            }
-        }
-
-        /* Estilos para dispositivos móveis */
-        @media (max-width: 768px) {
-            .hero-content {
-                position: absolute;
-                /* Para centralizar verticalmente */
-                left: 0;
-                /* Posiciona à esquerda */
-                padding: 20px;
-                /* Espacamento interno */
-            }
-
-            .hero-button {
-                margin-top: 10px;
-                /* Ajusta a margem superior para dispositivos móveis */
-            }
-        }
 
         .social-icons {
             position: fixed;
@@ -304,22 +272,38 @@
     </div>
 
     <div class="hero-container">
-        <div class="hero hero-left" style="background-image: url('img/principal_lateral.png');">
-            <div class="hero-content">
-
-                <div class="hero-text">
-                    <br>
-                    Transformo a sua carreira com mentoria acessível e personalizada.
-                </div>
-                <a href="https://api.whatsapp.com/send?phone=5519984241600" style="text-decoration: none;">
-                    <button class="hero-button pulsante">Contate-me</button>
-                </a>
+        <div class="hero-content">
+            <div class="hero-text">
+                <br>
+                Conectando pessoas, transformando espaços – inclusão com propósito.
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5519984241600" style="text-decoration: none;">
+                <br>
+<button class="cta">
+    <span class="hover-underline-animation"> Contate-me </span>
+    <svg
+      id="arrow-horizontal"
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="10"
+      viewBox="0 0 46 16"
+    >
+      <path
+        id="Path_10"
+        data-name="Path 10"
+        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+        transform="translate(30)"
+      ></path>
+    </svg>
+  </button>
+  
+            </a>
+        </div>
+    </div>
+    
+    
 
             </div>
-        </div>
-
-        <div class="hero hero-right" style="background-image: url('img/principal_2.png')"></div>
-    </div>
 
 
     <div id="whatswidget-pre-wrapper" class="">
@@ -629,6 +613,16 @@
     </div>
     <div class="contratar">
         <div class="sub-c">
+            <p class="tip">Compromisso com a diversidade</p>
+            <p class="second-text">Palestrante e facilitadora, atuo na promoção de ambientes mais justos e colaborativos
+                por meio da diversidade, inclusão e ESG.</p>
+        </div>
+        <div class="sub-c">
+            <p class="tip">Mentoria transformadora</p>
+            <p class="second-text">Atuo como mentora de carreira, ajudando profissionais a se desenvolverem e a
+                conquistarem novas oportunidades.</p>
+        </div>
+        <div class="sub-c">
             <p class="tip">Liderança estratégica</p>
             <p class="second-text">Com mais de 15 anos de experiência em Gestão de Crise, Vendas e Relacionamento,
                 lidero equipes com eficiência e visão estratégica.</p>
@@ -637,16 +631,6 @@
             <p class="tip">Destaque no mercado</p>
             <p class="second-text">Nos últimos 10 anos, conquistei posições de destaque em rankings de grandes empresas,
                 consolidando minha autoridade no setor.</p>
-        </div>
-        <div class="sub-c">
-            <p class="tip">Mentoria transformadora</p>
-            <p class="second-text">Atuo como mentora de carreira, ajudando profissionais a se desenvolverem e a
-                conquistarem novas oportunidades.</p>
-        </div>
-        <div class="sub-c">
-            <p class="tip">Compromisso com a diversidade</p>
-            <p class="second-text">Palestrante e facilitadora, atuo na promoção de ambientes mais justos e colaborativos
-                por meio da diversidade, inclusão e ESG.</p>
         </div>
         <div class="sub-c">
             <p class="tip">Paixão e autenticidade</p>
