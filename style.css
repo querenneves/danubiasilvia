@@ -264,7 +264,7 @@ a {
 
 /* Ajuste da imagem */
 .image_sobre img {
-  max-width: 50%;
+  max-width: 40%;
   border-radius: 20px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }

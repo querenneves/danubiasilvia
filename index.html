@@ -128,102 +128,106 @@
             text-shadow: 2px 2px 4px #0b7ef1;
         }
 
-      /* Ajusta a imagem para cobrir toda a tela */
-.hero-container {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('img/principal_lateral.png');
-    background-size: cover;
-  
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+        /* Ajusta a imagem para cobrir toda a tela */
+        .hero-container {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('img/principal_lateral.png');
+            background-size: cover;
 
-/* Estilização do conteúdo para melhor leitura */
-.hero-content {
-    background: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido para melhorar legibilidade */
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    max-width: 80%;
-}
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
 
-.hero-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-    color: #ffffff;
-    line-height: 1.4;
-}
-.cta {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
+        /* Estilização do conteúdo para melhor leitura */
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            /* Fundo escuro translúcido para melhorar legibilidade */
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            max-width: 80%;
+        }
 
-.cta span {
-  padding-bottom: 7px;
-  letter-spacing: 4px;
-  font-size: 14px;
-  padding-right: 15px;
-  text-transform: uppercase;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
-.cta svg {
-  transform: translateX(-8px);
-  transition: all 0.3s ease;
-}
+        .hero-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            color: #ffffff;
+            line-height: 1.4;
+        }
 
-.cta:hover svg {
-  transform: translateX(0);
-}
+        .cta {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
 
-.cta:active svg {
-  transform: scale(0.9);
-}
+        .cta span {
+            padding-bottom: 7px;
+            letter-spacing: 4px;
+            font-size: 14px;
+            padding-right: 15px;
+            text-transform: uppercase;
+        }
 
-.hover-underline-animation {
-  position: relative;
-  color: rgb(255, 255, 255);
-  padding-bottom: 20px;
-}
+        .cta svg {
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+        }
 
-.hover-underline-animation:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
+        .cta:hover svg {
+            transform: translateX(0);
+        }
 
-.cta:hover .hover-underline-animation:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
+        .cta:active svg {
+            transform: scale(0.9);
+        }
+
+        .hover-underline-animation {
+            position: relative;
+            color: rgb(255, 255, 255);
+            padding-bottom: 20px;
+        }
+
+        .hover-underline-animation:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffffff;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .cta:hover .hover-underline-animation:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
 
 
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
-    .hero-container {
-        background-image: url('./img/principal_lateral.png'); /* Imagem diferente no mobile, se necessário */
-    }
-    
-    .hero-content {
-        max-width: 90%;
-        font-size: 16px;
-    }
-}
+        /* Ajustes para telas menores */
+        @media (max-width: 768px) {
+            .hero-container {
+                background-image: url('./img/principal_lateral.png');
+                /* Imagem diferente no mobile, se necessário */
+            }
+
+            .hero-content {
+                max-width: 90%;
+                font-size: 16px;
+            }
+        }
 
 
         .social-icons {
@@ -236,40 +240,11 @@
             z-index: 1000;
             /* Certifica-se de que o ícone fique acima de outros elementos */
         }
-
-        .insta {
-            font-size: 30px;
-            /* Tamanho do ícone */
-            color: #E1306C;
-            /* Cor do ícone do Instagram */
-            text-decoration: none;
-            /* Remove o sublinhado do link */
-            transition: color 0.3s;
-            /* Transição suave para mudança de cor */
-            position: fixed;
-            /* Permite que o elemento fique fixo na tela */
-            right: 20px;
-            /* Distância da borda direita */
-            top: 20px;
-            /* Distância do topo (ajuste conforme necessário) */
-            z-index: 1000;
-            /* Garante que o ícone fique acima de outros elementos */
-        }
-
-        /* Efeito de hover (opcional) */
-        .insta:hover {
-            color: #C13584;
-            /* Cor ao passar o mouse */
-        }
     </style>
 </head>
 
 <body>
-    <div class="insta">
-        <a href="https://www.instagram.com/danubia7/" target="_blank" class="insta">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
+
 
     <div class="hero-container">
         <div class="hero-content">
@@ -279,31 +254,23 @@
             </div>
             <a href="https://api.whatsapp.com/send?phone=5519984241600" style="text-decoration: none;">
                 <br>
-<button class="cta">
-    <span class="hover-underline-animation"> Contate-me </span>
-    <svg
-      id="arrow-horizontal"
-      xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="10"
-      viewBox="0 0 46 16"
-    >
-      <path
-        id="Path_10"
-        data-name="Path 10"
-        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-        transform="translate(30)"
-      ></path>
-    </svg>
-  </button>
-  
+                <button class="cta">
+                    <span class="hover-underline-animation"> Contate-me </span>
+                    <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10"
+                        viewBox="0 0 46 16">
+                        <path id="Path_10" data-name="Path 10"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                            transform="translate(30)"></path>
+                    </svg>
+                </button>
+
             </a>
         </div>
     </div>
-    
-    
 
-            </div>
+
+
+    </div>
 
 
     <div id="whatswidget-pre-wrapper" class="">
@@ -548,19 +515,16 @@
         </style>
     </div>
     </div>
+    <br>
     <div class="master_sobre">
         <div class="sub_sobre">
             <div class="text_sobre">
                 <h1>Liderança em Transformação e Inclusão</h1>
                 <hr>
                 <p>
-                    Sou uma mulher cis, negra de pele clara, natural de Campinas-SP, apaixonada por roda de samba,
-                    crossfit e discos de vinil. Com mais de 15 anos de experiência em Gestão de Crise, Vendas,
-                    Relacionamento e Treinamento, desenvolvi habilidades sólidas para liderar equipes e gerenciar
-                    situações desafiadoras com eficácia. Nos últimos 10 anos, conquistei destaque em rankings de grandes
-                    empresas, consolidando meu nome como referência no setor. Atualmente, sou comunicadora, mentora de
-                    carreira, palestrante e facilitadora, com foco em diversidade, inclusão e ESG, áreas onde busco
-                    promover ambientes mais justos e colaborativos.
+                    Ajudo empresas e profissionais a crescerem com palestras e mentoria! Com foco em diversidade,
+                    inclusão e ESG, transformo equipes e acelero carreiras com estratégias assertivas. Vamos juntos
+                    impulsionar seu sucesso? Entre em contato!
                 </p>
             </div>
             <div class="image_sobre">
@@ -575,13 +539,11 @@
 
     <div class="servicos">
         <div class="card">
-            <img src="img/co-host.png" alt="Ícone Co-Host" class="card__icon">
+            <img src="img/Progra{M}aria.png" alt="Ícone Progra{m}aria" class="card__icon">
             <div class="card__content">
-                <p class="card__title">Co-Host</p>
-                <p class="card__description">Sou co-host do podcast, onde tenho aprimorado minha habilidade em
-                    comunicação, pois acredito que, com o microfone em mãos, temos o poder de transformar conversas em
-                    ações.</p>
-                <a href="https://emcast.com.br/" class="card__button secondary">Vem conhecer!</a>
+                <p class="card__title">Progra{m}aria</p>
+                <p class="card__description">Tecnologia, ESG e diversidade: como a inclusão digital pode transformar o futuro e reduzir desigualdades. Descubra os desafios e oportunidades desse cenário!</p>
+                <a href="https://www.programaria.org/como-o-impacto-social-da-tecnologia-esta-ligado-a-pauta-de-diversidade/" class="card__button secondary">Vem conhecer!</a>
             </div>
         </div>
         <div class="card">
@@ -638,178 +600,181 @@
                 vinil, trazendo autenticidade e energia para cada projeto.</p>
         </div>
     </div>
-<br>
-                <center><h1>Depoimentos</h1></center>
-                <hr>
-                <center>
-                    <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-                            </li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="avaliacoes">
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="review-text">
-                                        “Não largo mais!” 🏅
-                                        Esta é uma das frases dita por Dan, em uma das nossas últimas mentorias.
-                                        A minha conexão com a Dan iniciou através da Comunidade Awalé. Tivemos aulas
-                                        incríveis sobre letramento racial.
-                                        Depois do período de finalização do curso, tivemos mais quatro encontros.
-                                        Trocamos muito, para além do profissional, conselhos de vida, perrengues e
-                                        muitas risadas.
-                                        A Dan é uma profissional de excelência. Diz o que precisa ser dito, auxilia com
-                                        materiais didáticos e nos incentiva constantemente a busca por novas
-                                        trajetórias. Posso afirmar que a Bia de hoje, melhorou 80% graças a Danúbia.
-                                        Nossa jornada nunca é solitária. Sou imensamente feliz e grata por esta mulher
-                                        ter cruzado os meus caminhos. É certo que ela fará muitas mudanças. Na verdade,
-                                        já está fazendo, na vida de muitas pessoas, assim como fez e faz na minha!
-                                    </div>
-                                    <div class="profile">
-                                        <img src="img/beatriz.jpg" alt="Profile Image">
-                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
-                                    </div>
-                                    <div class="name">Beatriz Pimentel</div>
-
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="avaliacoes">
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="review-text">
-                                        A Dan foi essencial na minha jornada de autoconhecimento como uma líder negra.
-                                        Nossos encontros eram ricos porque ela sabe como extrair o melhor de cada pessoa
-                                        e trazer reflexões oportunas para as vivências diárias. Além disso, é
-                                        extremamente empática, conseguindo ter uma escuta vulnerável que permite
-                                        compreender o outro.
-                                    </div>
-                                    <div class="profile">
-                                        <img src="img/karina.jpg" alt="Profile Image">
-                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
-                                    </div>
-                                    <div class="name">Karina Souza</div>
-
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="avaliacoes">
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="review-text">
-                                        É com grande entusiasmo que recomendo a Danúbia como uma profissional exemplar e
-                                        dedicada. Tivemos o privilégio de trabalhar juntas em uma empresa de mentoria
-                                        voltada para o mercado de trabalho de pessoas negras, e eu pude observar em
-                                        primeira mão sua habilidade única em compartilhar conhecimento e promover um
-                                        ambiente de trabalho colaborativo.
-                                        Danúbia é notável por sua comunicação clara e eficaz, o que facilita a
-                                        colaboração e o entendimento entre os membros da equipe. Sua empatia e
-                                        disposição para apoiar os outros, aliadas à sua humildade, são testemunhos de
-                                        seu verdadeiro comprometimento e capacidade de trabalhar em equipe.
-                                    </div>
-                                    <div class="profile">
-                                        <img src="img/joana.jpg" alt="Profile Image">
-                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
-                                    </div>
-                                    <div class="name">Joana D'arc</div>
-
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="avaliacoes">
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="review-text">
-                                        Danúbia foi pessoa mentora voluntária num programa que visa contribuição para o
-                                        autoconhecimento e empoderamento de juventudes e adultos em situação de
-                                        periferia na zona sul de São Paulo.
-                                        Que mulher incrível! profissional e pessoa ímpar, de causas nobres e grande
-                                        coração.
-                                        Durante o programa, foi muito atenciosa, empática, carinhosa e disponível, tanto
-                                        para a Despertar, quanto para a pessoa mentorada.
-                                    </div>
-                                    <div class="profile">
-                                        <img src="img/carolina.jpg" alt="Profile Image">
-                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
-                                    </div>
-                                    <div class="name">Carolina Maria Souza</div>
-
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="avaliacoes">
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="review-text">
-                                        Danúbia é uma pessoa excepcional, profissional e mentora inspiradora. Sua
-                                        resiliência, dedicação e abordagem empática são notáveis. Ela oferece
-                                        orientações valiosas e suporte incondicional, tornando o aprendizado mais
-                                        eficiente e gratificante. Seu profissionalismo exemplar e prontidão para ajudar
-                                        tornam-na um exemplo a ser seguido. Conhecer essa profissional talentosa é
-                                        inspirador, lembrando-nos do impacto positivo que podemos ter na vida das
-                                        pessoas ao nosso redor.
-                                    </div>
-                                    <div class="profile">
-                                        <img src="img/handreia.jpg" alt="Profile Image">
-                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
-                                    </div>
-                                    <div class="name">Paty Muneron</div>
-
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="avaliacoes">
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="review-text">
-                                        Sempre pronta pra ajudar! Com informações claras, assertivas e que agregam valor. Compartilharmos da mesma equipe é um prazer! 
-                                    </div>
-                                    <div class="profile">
-                                        <img src="img/patrick.jpg" alt="Profile Image">
-                                        <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
-                                    </div>
-                                    <div class="name">Ana Maria</div>
-
-                                </div>
-                            </div>
+    <br>
+    <center>
+        <h1>Depoimentos</h1>
+    </center>
+    <hr>
+    <center>
+        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                </li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="avaliacoes">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                       
+                        <div class="review-text">
+                            “Não largo mais!” 🏅
+                            Esta é uma das frases dita por Dan, em uma das nossas últimas mentorias.
+                            A minha conexão com a Dan iniciou através da Comunidade Awalé. Tivemos aulas
+                            incríveis sobre letramento racial.
+                            Depois do período de finalização do curso, tivemos mais quatro encontros.
+                            Trocamos muito, para além do profissional, conselhos de vida, perrengues e
+                            muitas risadas.
+                            A Dan é uma profissional de excelência. Diz o que precisa ser dito, auxilia com
+                            materiais didáticos e nos incentiva constantemente a busca por novas
+                            trajetórias. Posso afirmar que a Bia de hoje, melhorou 80% graças a Danúbia.
+                            Nossa jornada nunca é solitária. Sou imensamente feliz e grata por esta mulher
+                            ter cruzado os meus caminhos. É certo que ela fará muitas mudanças. Na verdade,
+                            já está fazendo, na vida de muitas pessoas, assim como fez e faz na minha!
+                        </div>
+                        <div class="profile">
+                            <img src="img/beatriz.jpg" alt="Profile Image">
+                            <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                        </div>
+                        <div class="name">Beatriz Pimentel</div>
+
                     </div>
-                </center>
+                </div>
+                <div class="carousel-item">
+                    <div class="avaliacoes">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-text">
+                            A Dan foi essencial na minha jornada de autoconhecimento como uma líder negra.
+                            Nossos encontros eram ricos porque ela sabe como extrair o melhor de cada pessoa
+                            e trazer reflexões oportunas para as vivências diárias. Além disso, é
+                            extremamente empática, conseguindo ter uma escuta vulnerável que permite
+                            compreender o outro.
+                        </div>
+                        <div class="profile">
+                            <img src="img/karina.jpg" alt="Profile Image">
+                            <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                        </div>
+                        <div class="name">Karina Souza</div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="avaliacoes">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-text">
+                            É com grande entusiasmo que recomendo a Danúbia como uma profissional exemplar e
+                            dedicada. Tivemos o privilégio de trabalhar juntas em uma empresa de mentoria
+                            voltada para o mercado de trabalho de pessoas negras, e eu pude observar em
+                            primeira mão sua habilidade única em compartilhar conhecimento e promover um
+                            ambiente de trabalho colaborativo.
+                            Danúbia é notável por sua comunicação clara e eficaz, o que facilita a
+                            colaboração e o entendimento entre os membros da equipe. Sua empatia e
+                            disposição para apoiar os outros, aliadas à sua humildade, são testemunhos de
+                            seu verdadeiro comprometimento e capacidade de trabalhar em equipe.
+                        </div>
+                        <div class="profile">
+                            <img src="img/joana.jpg" alt="Profile Image">
+                            <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                        </div>
+                        <div class="name">Joana D'arc</div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="avaliacoes">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-text">
+                            Danúbia foi pessoa mentora voluntária num programa que visa contribuição para o
+                            autoconhecimento e empoderamento de juventudes e adultos em situação de
+                            periferia na zona sul de São Paulo.
+                            Que mulher incrível! profissional e pessoa ímpar, de causas nobres e grande
+                            coração.
+                            Durante o programa, foi muito atenciosa, empática, carinhosa e disponível, tanto
+                            para a Despertar, quanto para a pessoa mentorada.
+                        </div>
+                        <div class="profile">
+                            <img src="img/carolina.jpg" alt="Profile Image">
+                            <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                        </div>
+                        <div class="name">Carolina Maria Souza</div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="avaliacoes">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-text">
+                            Danúbia é uma pessoa excepcional, profissional e mentora inspiradora. Sua
+                            resiliência, dedicação e abordagem empática são notáveis. Ela oferece
+                            orientações valiosas e suporte incondicional, tornando o aprendizado mais
+                            eficiente e gratificante. Seu profissionalismo exemplar e prontidão para ajudar
+                            tornam-na um exemplo a ser seguido. Conhecer essa profissional talentosa é
+                            inspirador, lembrando-nos do impacto positivo que podemos ter na vida das
+                            pessoas ao nosso redor.
+                        </div>
+                        <div class="profile">
+                            <img src="img/handreia.jpg" alt="Profile Image">
+                            <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                        </div>
+                        <div class="name">Paty Muneron</div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="avaliacoes">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-text">
+                            Sempre pronta pra ajudar! Com informações claras, assertivas e que agregam valor.
+                            Compartilharmos da mesma equipe é um prazer!
+                        </div>
+                        <div class="profile">
+                            <img src="img/patrick.jpg" alt="Profile Image">
+                            <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                        </div>
+                        <div class="name">Ana Maria</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </center>
     <br>
     <div class="container">
         <div class="intro">
@@ -844,7 +809,7 @@
     </div>
     </div>
     <br>
-   
+
     <div class="card-container">
         <blockquote class="instagram-media zoom-card"
             style="border: 0; box-shadow: 0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
@@ -889,43 +854,42 @@
         </blockquote>
     </div>
     <script async src="//www.instagram.com/embed.js"></script>
-    
-                <footer>
-                    <div class="parcerias">
-                        <h2>Nossas Parcerias</h2>
-                        <div class="imagens-parcerias">
-                            <img src="img/mars.png" alt="Mars">
-                            <img src="img/jadlog.png" alt="Jadlog">
-                            <img src="img/ABRHSP.png" alt="ABRHSP">
-                            <img src="img/black_hands.png" alt="Black Hands">
-                            <img src="img/galgo_sa.png" alt="Galgo Sa">
-                            <img src="img/santo_andre.png" alt="Santo Andre">
-                            <img src="img/ZOE.png" alt="Zoe">
-                            <img src="img/intrinseca.png" alt="Intríseca">
-                            <img src="img/prestige.png" alt="Prestige">
-                            <img src="img/log.png" alt="Log">
-                            <img src="img/abrhrj.png" alt="ABRH RJ">
-                            <img src="img/day.png" alt="Day">
-                            <img src="img/unicamp.png" alt="Unicamp">
-                        </div>
-                    </div>
-                    <div class="contato">
-                        <h3>Contato</h3>
-                        <p>LinkedIn: <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-2a017585/"
-                                target="_blank">Danúbia
-                                Silva</a></p>
-                        <p>Email: <a href="mailto:danubia_77@hotmail.com">danubia_77@hotmail.com</a></p>
-                    </div>
-                </footer>
 
-                <script async src="//www.instagram.com/embed.js"></script>
-
+    <footer>
+        <div class="parcerias">
+            <h2>Nossas Parcerias</h2>
+            <div class="imagens-parcerias">
+                <img src="img/mars.png" alt="Mars">
+                <img src="img/jadlog.png" alt="Jadlog">
+                <img src="img/ABRHSP.png" alt="ABRHSP">
+                <img src="img/black_hands.png" alt="Black Hands">
+                <img src="img/galgo_sa.png" alt="Galgo Sa">
+                <img src="img/santo_andre.png" alt="Santo Andre">
+                <img src="img/ZOE.png" alt="Zoe">
+                <img src="img/intrinseca.png" alt="Intríseca">
+                <img src="img/prestige.png" alt="Prestige">
+                <img src="img/log.png" alt="Log">
+                <img src="img/abrhrj.png" alt="ABRH RJ">
+                <img src="img/day.png" alt="Day">
+                <img src="img/unicamp.png" alt="Unicamp">
             </div>
-            </footer>
         </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="contato">
+            <h3>Contato</h3>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-2a017585/" target="_blank">Danúbia
+                    Silva</a></p>
+            <p>Email: <a href="mailto:danubia_77@hotmail.com">danubia_77@hotmail.com</a></p>
+        </div>
+    </footer>
+
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    </div>
+    </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
