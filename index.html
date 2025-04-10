@@ -74,26 +74,24 @@
         }
 
         .imagens-parcerias {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            /* Centraliza as imagens */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px 40px;
+            /* espaçamento entre linhas e colunas */
+            justify-items: center;
+            /* centraliza os itens na célula */
+            align-items: center;
+            padding: 20px;
         }
 
         .imagens-parcerias img {
             width: 100px;
-            /* Ajuste a largura conforme necessário */
             height: auto;
-            /* Mantém a proporção */
-            margin: 10px;
-            /* Espaçamento entre as imagens */
             transition: transform 0.2s;
-            /* Efeito de hover opcional */
         }
 
         .imagens-parcerias img:hover {
             transform: scale(1.1);
-            /* Aumenta a imagem ao passar o mouse */
         }
 
         .contato {
@@ -249,11 +247,11 @@
     <div class="hero-container">
         <div class="hero-content">
             <div class="hero-text">
-                
+
                 Conectando pessoas, transformando espaços – inclusão com propósito e impacto real.
             </div>
             <a href="https://api.whatsapp.com/send?phone=5519984241600" style="text-decoration: none;">
-                
+
                 <button class="cta">
                     <span class="hover-underline-animation"> Contate-me </span>
                     <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10"
@@ -522,7 +520,8 @@
                 <h1>Liderança em Transformação e Inclusão</h1>
                 <hr>
                 <p>
-                    Ajudo empresas e profissionais a crescerem com palestras e mentoria! Com foco em impacto positivo, inclusão e ESG, transformo equipes e acelero jornadas com estratégias assertivas. Entre em contato!
+                    Ajudo empresas e profissionais a crescerem com palestras e mentoria! Com foco em impacto positivo,
+                    inclusão e ESG, transformo equipes e acelero jornadas com estratégias assertivas. Entre em contato!
                 </p>
             </div>
             <div class="image_sobre">
@@ -541,7 +540,8 @@
         <div class="contratar">
             <div class="sub-c">
                 <p class="tip">Compromisso com o impacto positivo</p>
-                <p class="second-text">Palestrante e Facilitadora, atuo na promoção de Ambientes mais justos e colaborativos através do impacto positivo, inclusão e ESG.</p>
+                <p class="second-text">Palestrante e Facilitadora, atuo na promoção de Ambientes mais justos e
+                    colaborativos através do impacto positivo, inclusão e ESG.</p>
             </div>
             <div class="sub-c">
                 <p class="tip">Mentoria transformadora</p>
@@ -630,15 +630,15 @@
             <div class="video-item">
                 <h2></h2>
                 <p>Inclusão são essenciais para uma sociedade justa e inovadora.</p>
-                <iframe src="https://www.youtube.com/embed/AoaTX-ruLZY?si=diqDn93ygyX7kAeV"
-                    title=" e Inclusão" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/AoaTX-ruLZY?si=diqDn93ygyX7kAeV" title=" e Inclusão"
+                    allowfullscreen></iframe>
             </div>
 
             <div class="video-item">
                 <h2>Inclusão</h2>
                 <p>Celebrar as diferenças enriquece nosso ambiente e promove novas perspectivas.</p>
-                <iframe src="https://www.youtube.com/embed/IneLDgohjmY?si=9pxmZGJJwl3tt8Qt"
-                    title=" e Inclusão" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/IneLDgohjmY?si=9pxmZGJJwl3tt8Qt" title=" e Inclusão"
+                    allowfullscreen></iframe>
             </div>
 
             <div class="video-item">
@@ -733,37 +733,38 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-/details/recommendations/?detailScreenTabIndex=0" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="avaliacoes">
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="review-text">
-                            “Não largo mais!” 🏅
-                            Esta é uma das frases dita por Dan, em uma das nossas últimas mentorias.
-                            A minha conexão com a Dan iniciou através da Comunidade Awalé. Tivemos aulas
-                            incríveis sobre letramento racial.
-                            Depois do período de finalização do curso, tivemos mais quatro encontros.
-                            Trocamos muito, para além do profissional, conselhos de vida, perrengues e
-                            muitas risadas.
-                            A Dan é uma profissional de excelência. Diz o que precisa ser dito, auxilia com
-                            materiais didáticos e nos incentiva constantemente a busca por novas
-                            trajetórias. Posso afirmar que a Bia de hoje, melhorou 80% graças a Danúbia.
-                            Nossa jornada nunca é solitária. Sou imensamente feliz e grata por esta mulher
-                            ter cruzado os meus caminhos. É certo que ela fará muitas mudanças. Na verdade,
-                            já está fazendo, na vida de muitas pessoas, assim como fez e faz na minha!
-                        </div>
-                        <div class="profile">
-                            <img src="img/beatriz.jpg" alt="Profile Image">
-                            <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
-                        </div>
-                        <div class="name">Beatriz Pimentel</div>
+                    <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-/details/recommendations/?detailScreenTabIndex=0"
+                        target="_blank" style="text-decoration: none; color: inherit;">
+                        <div class="avaliacoes">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">
+                                “Não largo mais!” 🏅
+                                Esta é uma das frases dita por Dan, em uma das nossas últimas mentorias.
+                                A minha conexão com a Dan iniciou através da Comunidade Awalé. Tivemos aulas
+                                incríveis sobre letramento racial.
+                                Depois do período de finalização do curso, tivemos mais quatro encontros.
+                                Trocamos muito, para além do profissional, conselhos de vida, perrengues e
+                                muitas risadas.
+                                A Dan é uma profissional de excelência. Diz o que precisa ser dito, auxilia com
+                                materiais didáticos e nos incentiva constantemente a busca por novas
+                                trajetórias. Posso afirmar que a Bia de hoje, melhorou 80% graças a Danúbia.
+                                Nossa jornada nunca é solitária. Sou imensamente feliz e grata por esta mulher
+                                ter cruzado os meus caminhos. É certo que ela fará muitas mudanças. Na verdade,
+                                já está fazendo, na vida de muitas pessoas, assim como fez e faz na minha!
+                            </div>
+                            <div class="profile">
+                                <img src="img/beatriz.jpg" alt="Profile Image">
+                                <img src="img/linkedin.webp" alt="linkedin Logo" class="linkedin-logo">
+                            </div>
+                            <div class="name">Beatriz Pimentel</div>
 
-                    </div>
+                        </div>
                 </div>
                 <div class="carousel-item">
                     <div class="avaliacoes">
@@ -908,104 +909,104 @@
 
     <section class="sub_sobre2">
         <div class="text_sobre2">
-          <h1>Potencializamos mulheres e empresas com propósito, equidade e impacto</h1>
-          <hr>
-          <p>
-            Há mais de 10 anos atuo com empresas de diferentes portes, sempre com foco em ESG, diversidade e
-            liderança feminina. Ao longo dessa trajetória, conduzi consultorias, treinamentos e mentorias que
-            ajudaram líderes e organizações a se tornarem mais humanas, inclusivas e alinhadas com práticas
-            sustentáveis. Também liderei projetos de governança, mediação de conflitos, implementação de políticas
-            de diversidade e desenvolvimento de programas de voluntariado corporativo. Com empatia, estratégia e
-            visão de futuro, ajudo a transformar ambientes de trabalho em espaços mais éticos, conscientes e
-            representativos.
-          </p>
+            <h1>Potencializamos mulheres e empresas com propósito, equidade e impacto</h1>
+            <hr>
+            <p>
+                Há mais de 10 anos atuo com empresas de diferentes portes, sempre com foco em ESG, diversidade e
+                liderança feminina. Ao longo dessa trajetória, conduzi consultorias, treinamentos e mentorias que
+                ajudaram líderes e organizações a se tornarem mais humanas, inclusivas e alinhadas com práticas
+                sustentáveis. Também liderei projetos de governança, mediação de conflitos, implementação de políticas
+                de diversidade e desenvolvimento de programas de voluntariado corporativo. Com empatia, estratégia e
+                visão de futuro, ajudo a transformar ambientes de trabalho em espaços mais éticos, conscientes e
+                representativos.
+            </p>
         </div>
-      </section>
-      
+    </section>
 
-            <br>
-            <div>
-                <div class="text_sobre">
-                    <h1 class="titulo-destaque" style="font-size: 23px;">
-                    Inclusão que transforma! Contrate:
-                    </h1>
-                    <hr>
-                    <ul style="padding: 0; margin: 0; list-style-type: none; display: flex; flex-direction: column; align-items: lefth;">
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Consultoria e Treinamento em ESG;
-                        </li>
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Mentoria para Mulheres na Liderança;
-                        </li>
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Palestras e Workshops de Impacto de pessoas, equidade, inclusão e pertencimento;
-                        </li>
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Estratégias de Governança Corporativa;
-                        </li>
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Formação de Lideranças Inclusivas;
-                        </li>
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Mediação e Resolução de Conflitos;
-                        </li>
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Diagnóstico e Políticas de Ética Social;
-                        </li>
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Planejamento Estratégico com Impacto Social;
-                        </li>
-                        <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
-                        ✓ Criação de Ambientes Corporativos Equitativos.
-                        </li>
-                      </ul>
-                      
-                  </div>
-                  
+
     <br>
-            <script async src="//www.instagram.com/embed.js"></script>
-
-            <footer>
-                <div class="parcerias">
-                 
-                    <div class="imagens-parcerias">
-                        <img src="img/mars.png" alt="Mars">
-                        <img src="img/jadlog.png" alt="Jadlog">
-                        <img src="img/ABRHSP.png" alt="ABRHSP">
-                        <img src="img/black_hands.png" alt="Black Hands">
-                        <img src="img/galgo_sa.png" alt="Galgo Sa">
-                        <img src="img/santo_andre.png" alt="Santo Andre">
-                        <img src="img/ZOE.png" alt="Zoe">
-                        <img src="img/intrinseca.png" alt="Intríseca">
-                        <img src="img/prestige.png" alt="Prestige">
-                        <img src="img/log.png" alt="Log">
-                        <img src="img/abrhrj.png" alt="ABRH RJ">
-                        <img src="img/day.png" alt="Day">
-                        <img src="img/AIR.jpg" alt="air">
-                        <img src="img/Floresta.jpg" alt="floresta">
-                        <img src="img/ajinomoto.jpg" alt="ajinomoto">
-                        <img src="img/trouwnutrition.jpg" alt="trouwnutrition">
-                        <img src="img/ancar ivanhoe.jpg" alt="ivanhoe">
-                        <img src="img/friopeças.jpg" alt="friopeças">
-                        <img src="img/ashland.jpg" alt="ashland">
-                        <img src="img/united way.jpg" alt="united">
-                        <img src="img/stf.jpg" alt="stf">
-                        <img src="img/unicamp.png" alt="Unicamp">
-                    </div>
-                </div>
-                <div class="contato">
-                    <h3>Contato</h3>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-2a017585/"
-                            target="_blank">Danúbia
-                            Silva</a></p>
-                    <p>Email: <a href="mailto:danubia_77@hotmail.com">danubia_77@hotmail.com</a></p>
-                </div>
-            </footer>
-
-            <script async src="//www.instagram.com/embed.js"></script>
+    <div>
+        <div class="text_sobre">
+            <h1 class="titulo-destaque" style="font-size: 23px;">
+                Inclusão que transforma! Contrate:
+            </h1>
+            <hr>
+            <ul
+                style="padding: 0; margin: 0; list-style-type: none; display: flex; flex-direction: column; align-items: lefth;">
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Consultoria e Treinamento em ESG;
+                </li>
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Mentoria para Mulheres na Liderança;
+                </li>
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Palestras e Workshops de Impacto de pessoas, equidade, inclusão e pertencimento;
+                </li>
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Estratégias de Governança Corporativa;
+                </li>
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Formação de Lideranças Inclusivas;
+                </li>
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Mediação e Resolução de Conflitos;
+                </li>
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Diagnóstico e Políticas de Ética Social;
+                </li>
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Planejamento Estratégico com Impacto Social;
+                </li>
+                <li style="line-height: 1.7; width: 100%; box-sizing: border-box; padding: 0 20px; text-align: lefth;">
+                    ✓ Criação de Ambientes Corporativos Equitativos.
+                </li>
+            </ul>
 
         </div>
+
+        <br>
+        <script async src="//www.instagram.com/embed.js"></script>
+
+        <footer>
+            <div class="parcerias">
+
+                <div class="imagens-parcerias">
+                    <img src="img/mars.png" alt="Mars">
+                    <img src="img/jadlog.png" alt="Jadlog">
+                    <img src="img/ABRHSP.png" alt="ABRHSP">
+                    <img src="img/black_hands.png" alt="Black Hands">
+                    <img src="img/galgo_sa.png" alt="Galgo Sa">
+                    <img src="img/santo_andre.png" alt="Santo Andre">
+                    <img src="img/ZOE.png" alt="Zoe">
+                    <img src="img/intrinseca.png" alt="Intríseca">
+                    <img src="img/prestige.png" alt="Prestige">
+                    <img src="img/log.png" alt="Log">
+                    <img src="img/abrhrj.png" alt="ABRH RJ">
+                    <img src="img/day.png" alt="Day">
+                    <img src="img/AIR.jpg" alt="air">
+                    <img src="img/Floresta.jpg" alt="floresta">
+                    <img src="img/ajinomoto.jpg" alt="ajinomoto">
+                    <img src="img/trouwnutrition.jpg" alt="trouwnutrition">
+                    <img src="img/ancar ivanhoe.jpg" alt="ivanhoe">
+                    <img src="img/friopeças.jpg" alt="friopeças">
+                    <img src="img/ashland.jpg" alt="ashland">
+                    <img src="img/united way.jpg" alt="united">
+                    <img src="img/stf.jpg" alt="stf">
+                    <img src="img/unicamp.png" alt="Unicamp">
+                </div>
+            </div>
+            <div class="contato">
+                <h3>Contato</h3>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-2a017585/" target="_blank">Danúbia
+                        Silva</a></p>
+                <p>Email: <a href="mailto:danubia_77@hotmail.com">danubia_77@hotmail.com</a></p>
+            </div>
         </footer>
+
+        <script async src="//www.instagram.com/embed.js"></script>
+
+    </div>
+    </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
