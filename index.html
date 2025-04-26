@@ -13,6 +13,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 
@@ -531,44 +532,75 @@
     </div>
     <center>
         <div class="servicos_sobre" style="text-align: left; margin: 20px 40px; font-size: 19px;">
-            <h1 style="font-size: 30px;">Por que escolher meus serviços?</h1>
-            <hr>
-            <p style="font-size: 17px;">
-                Liderança, Mentoria, Inclusão.
-            </p>
+          <h1 style="font-size: 30px;">Por que escolher meus serviços?</h1>
+          <hr>
+          <p style="font-size: 17px;">
+            Liderança, Mentoria, Inclusão.
+          </p>
         </div>
-        <div class="contratar">
-            <div class="sub-c">
-                <p class="tip">Compromisso com o impacto positivo</p>
-                <p class="second-text">Palestrante e Facilitadora, atuo na promoção de Ambientes mais justos e
-                    colaborativos através do impacto positivo, inclusão e ESG.</p>
+      
+        <div id="carrosselServicos" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px;">
+          <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+              <div class="text-center p-4">
+                <h5>Compromisso com o impacto positivo</h5>
+                <p class="second-text">Palestrante e Facilitadora, atuo na promoção de Ambientes mais justos e colaborativos através do impacto positivo, inclusão e ESG.</p>
+              </div>
             </div>
-            <div class="sub-c">
-                <p class="tip">Mentoria transformadora</p>
-                <p class="second-text">Atuo como mentora de jornada, ajudando profissionais a se desenvolverem e a
-                    conquistarem novas oportunidades.</p>
+            
+            <div class="carousel-item">
+              <div class="text-center p-4">
+                <h5>Mentoria transformadora</h5>
+                <p class="second-text">Atuo como mentora de jornada, ajudando profissionais a se desenvolverem e a conquistarem novas oportunidades.</p>
+              </div>
             </div>
-            <div class="sub-c">
-                <p class="tip">Liderança estratégica</p>
-                <p class="second-text">Com mais de 15 anos de experiência em Gestão de Crise, Vendas e Relacionamento,
-                    lidero equipes com eficiência e visão estratégica.</p>
+            
+            <div class="carousel-item">
+              <div class="text-center p-4">
+                <h5>Liderança estratégica</h5>
+                <p class="second-text">Com mais de 15 anos de experiência em Gestão de Crise, Vendas e Relacionamento, lidero equipes com eficiência e visão estratégica.</p>
+              </div>
             </div>
-            <div class="sub-c">
-                <p class="tip">Destaque no mercado</p>
-                <p class="second-text">Nos últimos 10 anos, conquistei posições de destaque em rankings de grandes
-                    empresas,
-                    consolidando minha autoridade no setor.</p>
+            
+            <div class="carousel-item">
+              <div class="text-center p-4">
+                <h5>Destaque no mercado</h5>
+                <p class="second-text">Nos últimos 10 anos, conquistei posições de destaque em rankings de grandes empresas, consolidando minha autoridade no setor.</p>
+              </div>
             </div>
-            <div class="sub-c">
-                <p class="tip">Paixão e autenticidade</p>
-                <p class="second-text">Natural de Campinas-SP, sou apaixonada por rodas de samba, crossfit e discos de
-                    vinil, trazendo autenticidade e energia para cada projeto.</p>
+            
+            <div class="carousel-item">
+              <div class="text-center p-4">
+                <h5>Paixão e autenticidade</h5>
+                <p class="second-text">Natural de Campinas-SP, sou apaixonada por rodas de samba, crossfit e discos de vinil, trazendo autenticidade e energia para cada projeto.</p>
+              </div>
             </div>
+      
+          </div>
+      
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carrosselServicos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carrosselServicos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+      
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrosselServicos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carrosselServicos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carrosselServicos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carrosselServicos" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carrosselServicos" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
         </div>
-        <br>
-        <h1>Participações em mídias e publicações</h1>
-    </center>
-    <hr>
+      </center>
+      
+    
 
     <div class="servicos">
         <div class="card">
@@ -1011,6 +1043,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
