@@ -248,9 +248,46 @@
 </head>
 
 <body>
+    <!-- MENU DE NAVEGAÇÃO -->
 
+<nav class="nav-menu desktop-menu" id="navMenu">
+    <div class="nav-container">
+        <a href="#inicio" class="nav-item"><i class="fas fa-home"></i> Início</a>
+        <a href="#sobre" class="nav-item"><i class="fas fa-user"></i> Sobre</a>
+        <a href="#servicos" class="nav-item"><i class="fas fa-cog"></i> Serviços</a>
+        <a href="#conteudos" class="nav-item"><i class="fas fa-play-circle"></i> Conteúdos</a>
+        <a href="#depoimentos" class="nav-item"><i class="fas fa-star"></i> Depoimentos</a>
+        <a href="#contato" class="nav-item"><i class="fas fa-envelope"></i> Contato</a>
+        <a href="#parcerias" class="nav-item"><i class="fas fa-handshake"></i> Parcerias</a>
+    </div>
+</nav>
 
-    <div class="hero-container">
+<!-- MENU MOBILE (retrátil - visível apenas em mobile) -->
+<div class="mobile-menu-container">
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-icon">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </label>
+
+    <!-- Overlay escuro -->
+    <div class="menu-overlay"></div>
+
+    <!-- Conteúdo do menu -->
+    <nav class="mobile-nav">
+        <div class="nav-container-mobile">
+            <a href="#inicio" class="nav-item" onclick="closeMenu()"><i class="fas fa-home"></i> Início</a>
+            <a href="#sobre" class="nav-item" onclick="closeMenu()"><i class="fas fa-user"></i> Sobre</a>
+            <a href="#servicos" class="nav-item" onclick="closeMenu()"><i class="fas fa-cog"></i> Serviços</a>
+            <a href="#conteudos" class="nav-item" onclick="closeMenu()"><i class="fas fa-play-circle"></i> Conteúdos</a>
+            <a href="#depoimentos" class="nav-item" onclick="closeMenu()"><i class="fas fa-star"></i> Depoimentos</a>
+            <a href="#contato" class="nav-item" onclick="closeMenu()"><i class="fas fa-envelope"></i> Contato</a>
+            <a href="#parcerias" class="nav-item" onclick="closeMenu()"><i class="fas fa-handshake"></i> Parcerias</a>
+        </div>
+    </nav>
+</div>
+    <div class="hero-container" id="inicio">
         <div class="hero-content">
             <div class="hero-text">
 
@@ -521,7 +558,7 @@
     </div>
     <br>
     <center>
-        <section class="ds-servicos-contexto">
+        <section class="ds-servicos-contexto" id="servicos">
             <div class="ds-container-texto">
                 <h1 class="ds-titulo">Por que escolher meus serviços?</h1>
                 <div class="ds-divisor"></div>
@@ -592,7 +629,7 @@
                 </div>
             </div>
         </section>
-        <section class="sobre_principal">
+        <section class="sobre_principal" id="sobre">
             <div class="sobre_container">
 
                 <!-- Lado da Imagem com Elementos Flutuantes -->
@@ -622,15 +659,15 @@
         </section>
     </center>
 
-   <!-- Seção com a imagem definida diretamente -->
-<section class="impacto" style="background-image: url('img/impacto.jpg');">
-    <div class="impacto-content reveal">
-        <h2>Impacto que gera transformação</h2>
-        <p>Estratégia, inclusão e ESG como pilares de crescimento sustentável.</p>
-    </div>
-</section>
+    <section class="impacto">
+        <div class="impacto-bg"></div>
+        <div class="impacto-content">
+            <h2>Impacto que gera transformação</h2>
+            <p>Estratégia, inclusão e ESG como pilares de crescimento sustentável.</p>
+        </div>
+    </section>
     <br>
-    <div class="container">
+    <div class="container" id="conteudos">
         <div class="intro">
             <h1>Explore aqui alguns conteúdos</h1>
             <hr>
@@ -734,74 +771,141 @@
     </center>
     <hr>
 
-    <!-- VERSÃO DESKTOP (Lado a lado) - Visível em tablets e computadores -->
-    <div class="container d-none d-md-block">
-        <div class="row g-4 justify-content-center"> <!-- g-4 adiciona espaçamento entre os cards -->
-            <!-- Beatriz -->
-            <div class="col-md-4 col-lg">
-                <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-/details/recommendations/?detailScreenTabIndex=0" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="avaliacoes h-100">
-                        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <div class="review-text">“Não largo mais!” 🏅 (...) Posso afirmar que a Bia de hoje, melhorou
-                            80% graças a Danúbia. Nossa jornada nunca é solitária. Sou imensamente feliz e grata por
-                            esta mulher ter cruzado os meus caminhos.</div>
-                        <div class="profile"><img src="img/beatriz.jpg" alt="Profile Image"><img src="img/linkedin.webp"
-                                alt="linkedin Logo" class="linkedin-logo"></div>
-                        <div class="name">Beatriz Pimentel</div>
-                    </div>
-                </a>
-            </div>
-            <!-- Karina -->
-            <div class="col-md-4 col-lg">
+
+ <div id="depoimentos" style="position: relative; top: -70px; visibility: hidden;"></div>
+<div class="container d-none d-md-block">
+    <div class="row g-4 justify-content-center">
+        <!-- Beatriz -->
+        <div class="col-md-4 col-lg">
+            <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-/details/recommendations/?detailScreenTabIndex=0"
+                target="_blank" style="text-decoration: none; color: inherit;">
                 <div class="avaliacoes h-100">
                     <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <div class="review-text">A Dan foi essencial na minha jornada de autoconhecimento como uma líder
-                        negra. Nossos encontros eram ricos porque ela sabe como extrair o melhor de cada pessoa e trazer
-                        reflexões oportunas para as vivências diárias.</div>
-                    <div class="profile"><img src="img/karina.jpg" alt="Profile Image"><img src="img/linkedin.webp"
+                    <div class="review-text">“Não largo mais!” 🏅 (...) Posso afirmar que a Bia de hoje, melhorou
+                        80% graças a Danúbia. Nossa jornada nunca é solitária. Sou imensamente feliz e grata por
+                        esta mulher ter cruzado os meus caminhos.</div>
+                    <div class="profile"><img src="img/beatriz.jpg" alt="Profile Image"><img src="img/linkedin.webp"
                             alt="linkedin Logo" class="linkedin-logo"></div>
-                    <div class="name">Karina Souza</div>
+                    <div class="name">Beatriz Pimentel</div>
                 </div>
+            </a>
+        </div>
+        <!-- Karina -->
+        <div class="col-md-4 col-lg">
+            <div class="avaliacoes h-100">
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">A Dan foi essencial na minha jornada de autoconhecimento como uma líder
+                    negra. Nossos encontros eram ricos porque ela sabe como extrair o melhor de cada pessoa e trazer
+                    reflexões oportunas para as vivências diárias.</div>
+                <div class="profile"><img src="img/karina.jpg" alt="Profile Image"><img src="img/linkedin.webp"
+                        alt="linkedin Logo" class="linkedin-logo"></div>
+                <div class="name">Karina Souza</div>
             </div>
-            <!-- Carolina -->
-            <div class="col-md-4 col-lg">
-                <div class="avaliacoes h-100">
-                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <div class="review-text">Danúbia foi pessoa mentora voluntária num programa que visa contribuição
-                        para o autoconhecimento e empoderamento de juventudes e adultos em situação de periferia. Que
-                        mulher incrível! Profissional e pessoa ímpar.</div>
-                    <div class="profile"><img src="img/carolina.jpg" alt="Profile Image"><img src="img/linkedin.webp"
-                            alt="linkedin Logo" class="linkedin-logo"></div>
-                    <div class="name">Carolina Maria Souza</div>
-                </div>
+        </div>
+        <!-- Carolina -->
+        <div class="col-md-4 col-lg">
+            <div class="avaliacoes h-100">
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">Danúbia foi pessoa mentora voluntária num programa que visa contribuição
+                    para o autoconhecimento e empoderamento de juventudes e adultos em situação de periferia. Que
+                    mulher incrível! Profissional e pessoa ímpar.</div>
+                <div class="profile"><img src="img/carolina.jpg" alt="Profile Image"><img src="img/linkedin.webp"
+                        alt="linkedin Logo" class="linkedin-logo"></div>
+                <div class="name">Carolina Maria Souza</div>
             </div>
-            <!-- Patrick -->
-            <div class="col-md-4 col-lg">
-                <div class="avaliacoes h-100">
-                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <div class="review-text">Sempre pronta pra ajudar! Com informações claras, assertivas e que agregam
-                        valor. Compartilharmos da mesma equipe é um prazer!</div>
-                    <div class="profile"><img src="img/patrick.jpg" alt="Profile Image"><img src="img/linkedin.webp"
-                            alt="linkedin Logo" class="linkedin-logo"></div>
-                    <div class="name">Patrick Javaisas</div>
-                </div>
+        </div>
+        <!-- Patrick -->
+        <div class="col-md-4 col-lg">
+            <div class="avaliacoes h-100">
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">Sempre pronta pra ajudar! Com informações claras, assertivas e que agregam
+                    valor. Compartilharmos da mesma equipe é um prazer!</div>
+                <div class="profile"><img src="img/patrick.jpg" alt="Profile Image"><img src="img/linkedin.webp"
+                        alt="linkedin Logo" class="linkedin-logo"></div>
+                <div class="name">Patrick Javaisas</div>
             </div>
         </div>
     </div>
+</div>
+
+<!-- VERSÃO MOBILE (Carrossel) - Visível apenas no Celular -->
+<div class="carousel slide d-md-none" data-bs-ride="carousel">
+    <div id="depoimentos-mobile" class="carousel slide d-md-none" data-bs-ride="carousel"></div>
+    <div class="carousel-indicators">
+         <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="3"></button>
+         <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="4"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active"> <!-- Beatriz -->
+            <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-/details/recommendations/?detailScreenTabIndex=0" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="avaliacoes">
+                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="review-text">“Não largo mais!” 🏅 (...) Posso afirmar que a Bia de hoje, melhorou
+                        80% graças a Danúbia. Nossa jornada nunca é solitária. Sou imensamente feliz e grata por
+                        esta mulher ter cruzado os meus caminhos.</div>
+                    <div class="profile"><img src="img/beatriz.jpg" alt="Profile Image"><img src="img/linkedin.webp"
+                            alt="linkedin Logo" class="linkedin-logo"></div>
+                    <div class="name">Beatriz Pimentel</div>
+                </div>
+            </a>
+        </div>
+        <div class="carousel-item"> <!-- Karina -->
+            <div class="avaliacoes">
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">A Dan foi essencial na minha jornada de autoconhecimento como uma líder
+                    negra. Nossos encontros eram ricos porque ela sabe como extrair o melhor de cada pessoa e trazer
+                    reflexões oportunas para as vivências diárias.</div>
+                <div class="profile"><img src="img/karina.jpg" alt="Profile Image"><img src="img/linkedin.webp"
+                        alt="linkedin Logo" class="linkedin-logo"></div>
+                <div class="name">Karina Souza</div>
+            </div>
+        </div>
+        <div class="carousel-item"> <!-- Carolina -->
+            <div class="avaliacoes">
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">Danúbia foi pessoa mentora voluntária num programa que visa contribuição
+                    para o autoconhecimento e empoderamento de juventudes e adultos em situação de periferia. Que
+                    mulher incrível! Profissional e pessoa ímpar.</div>
+                <div class="profile"><img src="img/carolina.jpg" alt="Profile Image"><img src="img/linkedin.webp"
+                        alt="linkedin Logo" class="linkedin-logo"></div>
+                <div class="name">Carolina Maria Souza</div>
+            </div>
+        </div>
+        <div class="carousel-item"> <!-- Patrick -->
+            <div class="avaliacoes">
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">Sempre pronta pra ajudar! Com informações claras, assertivas e que agregam
+                    valor. Compartilharmos da mesma equipe é um prazer!</div>
+                <div class="profile"><img src="img/patrick.jpg" alt="Profile Image"><img src="img/linkedin.webp"
+                        alt="linkedin Logo" class="linkedin-logo"></div>
+                <div class="name">Patrick Javaisas</div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- VERSÃO MOBILE (Carrossel) - Visível apenas no Celular -->
-    <div id="carouselExampleIndicators" class="carousel slide d-md-none" data-bs-ride="carousel">
+    <div id="depoimentos-mobile" class="carousel slide d-md-none" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                 class="active"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#depoimentos-mobile" data-bs-slide-to="4"></button>
         </div>
 
         <div class="carousel-inner">
@@ -893,7 +997,7 @@
         <script async src="//www.instagram.com/embed.js"></script>
 
         <footer>
-            <div class="parcerias">
+            <div class="parcerias" id="parcerias">
                 <center>
                     <h3>Por onde já passei</h3>
                 </center>
@@ -928,7 +1032,7 @@
                     <img src="img/G2L_logo.png" alt="G2L">
                 </div>
             </div>
-            <div class="contato">
+            <div class="contato" id="contato">
                 <h3>Contato</h3>
                 <p>LinkedIn: <a href="https://www.linkedin.com/in/dan%C3%BAbia-silva-2a017585/" target="_blank">Danúbia
                         Silva</a></p>
@@ -942,15 +1046,41 @@
     </footer>
     </div>
     <script> const reveals = document.querySelectorAll(".reveal"); function revealOnScroll() { reveals.forEach((el) => { const windowHeight = window.innerHeight; const elementTop = el.getBoundingClientRect().top; if (elementTop < windowHeight - 100) { el.classList.add("active"); } }); } window.addEventListener("scroll", revealOnScroll); </script>
-    <script> window.addEventListener("scroll", function () { const impacto = document.querySelector(".impacto"); let offset = window.pageYOffset; impacto.style.backgroundPositionY = offset * 0.5 + "px"; }); </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const impactoBg = document.querySelector(".impacto-bg");
+            if (!impactoBg) return;
+
+            let ticking = false;
+
+            window.addEventListener("scroll", function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        const scrolled = window.scrollY;
+                        const maxScroll = document.body.scrollHeight - window.innerHeight;
+                        const scrollPercent = scrolled / maxScroll;
+
+                        // Zoom suave: 1 = tamanho normal, 1.1 = 10% maior
+                        const scale = 1 + (scrollPercent * 0.1);
+                        impactoBg.style.transform = `scale(${scale})`;
+
+                        ticking = false;
+                    });
+
+                    ticking = true;
+                }
+            });
+        });
+    </script>
+    <script>
+        // Função para fechar o menu mobile ao clicar em um link
+        function closeMenu() {
+            document.getElementById('menu-toggle').checked = false;
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
 
 </html>
-
-
-
-
-
